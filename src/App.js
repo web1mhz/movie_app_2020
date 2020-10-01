@@ -15,41 +15,35 @@ function Fruit (prop) {
 
 const foodIlike = [
   {
+    id: 1,
     name:"사과",
     image: "https://placeimg.com/200/200/nature",
   },
   {
+    id: 2,
     name:"수박",
     image: "https://placeimg.com/200/200/any",
-  }
- 
-]
-
-
-const movieIlike = [
-  {
-    name:"사과",
-    image: "https://placeimg.com/200/200/nature",
   },
   {
-    name:"수박",
-    image: "https://placeimg.com/200/200/any",
+    id: 3,
+    name:"포도",
+    image: "",
   }
  
-]
+];
+
+
+
+
 
 function App() {
   return (
     <div>     
       <h1> 과일 종류 </h1> 
-      {
-        foodIlike.map(dish=>(
-          <Fruit name={dish.name} img={dish.image}/>
-        ))
-      }      
-
+      {foodIlike.map(dish =>(
+        <Fruit key={dish.id} name = {dish.name} img={dish.image}/>
+      ))}  
     </div>
-
   );
 }
 
