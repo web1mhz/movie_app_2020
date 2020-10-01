@@ -1,25 +1,62 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+function Fruit (prop) {
+  
+  return (
+   <div >
+      
+      <h1> {prop.name}이다. </h1> 
+      <img src = {prop.img} alt={prop.name}></img> 
+       </div>   ); 
+  
+};
+
+
+
+const foodIlike = [
+  {
+    name:"사과",
+    image: "https://placeimg.com/200/200/nature",
+  },
+  {
+    name:"수박",
+    image: "https://placeimg.com/200/200/any",
+  }
+ 
+]
+
+
+const movieIlike = [
+  {
+    name:"사과",
+    image: "https://placeimg.com/200/200/nature",
+  },
+  {
+    name:"수박",
+    image: "https://placeimg.com/200/200/any",
+  }
+ 
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>     
+      <h1> 과일 종류 </h1> 
+      {
+        foodIlike.map(dish=>(
+          <Fruit name={dish.name} img={dish.image}/>
+        ))
+      } 
+
+
+      {<Movie />}
+
+      <Tgkim/>
+
+     
+
     </div>
+
   );
 }
 
