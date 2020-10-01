@@ -46,14 +46,7 @@ function App() {
         foodIlike.map(dish=>(
           <Fruit name={dish.name} img={dish.image}/>
         ))
-      } 
-
-
-      {<Movie />}
-
-      <Tgkim/>
-
-     
+      }      
 
     </div>
 
